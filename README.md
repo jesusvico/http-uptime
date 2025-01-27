@@ -9,10 +9,19 @@ HTTP Uptime is a tool designed to monitor the uptime of your websites and APIs. 
 
 ## Installation
 
-To install HTTP Uptime, clone the repository and install the dependencies:
-
+We recommend using Docker to run HTTP Uptime. You can pull the Docker image from Docker Hub and run it with the following commands:
 ```bash
-git clone https://github.com/yourusername/http-uptime.git
+docker pull jesusvico/http-uptime:latest
+docker run -d \
+  -v /path/to/your/config.yaml:/etc/http-uptime/config.yaml \
+  -e PORT=8080 \
+  -p 8080:8080 \
+  jesusvico/http-uptime:latest
+```
+
+You also can use Docker Compose for running the application:
+```bash
+docker-compose up -d
 ```
 
 ## Configuration
