@@ -1,0 +1,8 @@
+endpoints:
+  - name: Google
+    url: https://www.google.com
+  - name: Amazon
+    url: https://www.amazon.com
+  - name: Example
+    url: https://example.com
+  
